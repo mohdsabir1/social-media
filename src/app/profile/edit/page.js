@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ImageUpload } from "@/components/ui/image-upload";
+import { ArrowLeft } from 'lucide-react';
 
 export default function EditProfilePage() {
   const router = useRouter();
@@ -88,6 +89,12 @@ export default function EditProfilePage() {
 
   return (
     <div className="container max-w-2xl mx-auto py-8 px-4">
+        <button
+          onClick={() => router.back()}
+          className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+        >
+          <ArrowLeft className="h-5 w-5" />
+        </button>
       <div className="space-y-8">
         <div>
           <h1 className="text-3xl font-bold">Edit Profile</h1>

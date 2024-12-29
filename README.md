@@ -1,22 +1,33 @@
-# Social Media Platform
+# NetWave - Modern Social Networking Platform
 
-A modern social media platform built with Next.js 14, featuring real-time interactions, responsive design, and a clean user interface.
+NetWave is a cutting-edge social networking platform built with Next.js 14, featuring real-time interactions, responsive design, and a seamless user experience.
 
 ## Features
 
-- 🔐 User Authentication (Login/Signup)
-- 👤 User Profiles
-  - Profile Picture
+- 🔐 Secure User Authentication
+  - Email & Password Login
+  - Protected Routes
+  - Session Management
+- 👤 Rich User Profiles
+  - Customizable Profile Pictures
   - Bio Information
-  - Post Grid Layout
+  - Post Collections
 - 📱 Responsive Design
-- 📝 Posts with Multiple Media
-  - Image Support
-  - Media Slider for Multiple Images
-  - Like and Comment System
-- 💬 Real-time Comments
-- ❤️ Like System
-- 🎨 Modern UI with Tailwind CSS
+  - Mobile-First Approach
+  - Adaptive Layouts
+  - Touch-Friendly Interface
+- 📝 Dynamic Content Sharing
+  - Multi-Media Post Support
+  - Image Galleries
+  - Rich Text Content
+- 💬 Interactive Features
+  - Real-time Comments
+  - Post Likes
+  - User Mentions
+- 🎨 Modern UI/UX
+  - Clean Design
+  - Smooth Animations
+  - Intuitive Navigation
 
 ## Tech Stack
 
@@ -25,7 +36,7 @@ A modern social media platform built with Next.js 14, featuring real-time intera
 - **UI Components:** shadcn/ui
 - **Database:** MongoDB
 - **Authentication:** NextAuth.js
-- **Image Storage:** Cloudinary
+- **Media Storage:** Cloudinary
 - **State Management:** React Hooks
 
 ## Getting Started
@@ -33,7 +44,7 @@ A modern social media platform built with Next.js 14, featuring real-time intera
 1. Clone the repository:
 ```bash
 git clone <your-repo-url>
-cd social-media
+cd netwave
 ```
 
 2. Install dependencies:
@@ -48,6 +59,7 @@ Create a `.env.local` file in the root directory and add:
 ```env
 MONGODB_URI=your_mongodb_uri
 NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
@@ -66,7 +78,7 @@ yarn dev
 
 ```
 /src
-  /app                 # App router pages
+  /app                 # Next.js app router pages
   /components         # Reusable components
     /ui              # UI components
     /post            # Post-related components
@@ -75,6 +87,17 @@ yarn dev
   /models            # MongoDB models
   /hooks             # Custom React hooks
 ```
+
+## SEO Optimization
+
+NetWave is built with SEO in mind:
+- Server-side rendering for better SEO
+- Optimized meta tags
+- Semantic HTML structure
+- Structured data for rich snippets
+- Mobile-friendly design
+- Fast loading times
+- Social media meta tags
 
 ## Contributing
 

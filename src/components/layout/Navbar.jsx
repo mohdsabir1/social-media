@@ -23,7 +23,14 @@ export default function Navbar({ user }) {
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-semibold text-indigo-600">
-            Social Media
+           <Image 
+             src="/full_logo.png" 
+             alt="Logo" 
+             width={100} 
+             height={40} 
+             priority
+             style={{ width: 'auto', height: 'auto' }}
+           />
           </Link>
 
           <div className="relative" ref={dropdownRef}>
@@ -36,6 +43,7 @@ export default function Navbar({ user }) {
                   src={user?.profilePicture || '/default-avatar.png'}
                   alt={user?.fullName || 'User'}
                   fill
+                  sizes="(max-width: 768px) 32px, 32px"
                   className="rounded-full object-cover"
                 />
               </div>

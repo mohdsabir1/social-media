@@ -9,9 +9,14 @@ export async function GET(request, { params }) {
     await connectDB();
     
     const post = await Post.findById(params.id)
-      .populate('author', 'fullName profilePicture')
-      .populate('comments.author', 'fullName profilePicture')
-      .populate('comments.replies.author', 'fullName profilePicture');
+      .populate('author', 'username fullName profilePicture')
+      .populate({
+        path: 'comments',
+        populate: {
+          path: 'author',
+          select: 'username fullName profilePicture'
+        }
+      });
 
     if (!post) {
       return NextResponse.json(
